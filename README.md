@@ -29,3 +29,23 @@ This project is primarily intended for educational and research purposes.
   pip install numpy scipy pillow paho-mqtt
   ```
 - Access to the hardware devices (PCA controller and locator).
+
+## Usage
+
+1. Configure MQTT broker settings:
+  ```python
+  MQTT_HOST = 'your_broker_ip'
+  SUBSCRIBER_TOPIC = 'your/subscriber/topic'
+  PUBLISHER_TOPIC = 'your/publisher/topic'
+  ```
+2. Run the main program:
+  ```bash
+  python main.py
+  ```
+
+The robot will listen to commands from the subscriber topic and execute navigation tasks.
+
+## Notes
+
+- This repository focuses on the control logic. Physical hardware is required for full functionality.
+- The `env_lib_2.png` file represents the environment map and should be placed in the project directory.
